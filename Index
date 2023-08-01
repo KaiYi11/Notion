@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+
+    <style>
+
+        .widget {
+            padding: 5px 5px ;
+            color: #000000;
+            text-align: center;
+                max-width: 95%;
+            margin: auto;
+            font-variant-caps: petite-caps;
+            font-size: 2em;
+
+        }
+
+        div {
+             width: 95%;
+             min-height: 100px;
+
+            background:
+                linear-gradient(to right, black 4px, transparent 4px) 0 0,
+                linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+}
+
+     
+    </style>
+</head>
+<body>
+
+    <div class="widget" id="widget"></div>
+
+
+<script>
+
+quotes=[
+"悲观者只见到机会后面的问题，乐观者却看见问题后面的机会。",
+"是大山就有高度和坡度，是江河就有宽度和深度；是人就存在不足和错误。",
+"当面对重重困难的时候，应该意识到相对于你的整个生命，这些难题其实是微不足道的。",
+"你见过不开心的马吗？或忧愁的鸟吗？它们没有烦恼，因为它们不必在同类面前显耀自己。",
+"冷静分析过去的错误，设法从中获益，再忘掉它，这是惟一让过去有建设性意义的做法。",
+"我们大多数人不是为昨天懊恼，就是为了明天担忧，偏偏不肯好好把握今天！",
+"不要心怀恨意。遇到困难时，不要害怕让步，小人总是坚持己见以维持尊严；愿意主动伸出手与人言和，坦诚自己的错误，并提议重新开始的人，才是气度恢弘的人。",
+"只要你“装出”对工作感兴趣的样子，就有可能使你产生真正的兴趣，也可能减少你的倦怠、紧张与忧虑。",
+"不要因为嫌事情轻微，而不愿做出最佳表现。完成任何一件事，都能使人更强壮。能把小事做好，大事才不会有问题。",
+"今天就是生命——你惟一确实拥有的生命。充分运用今天吧！对某些事激发点兴趣吧！把你自己摇醒吧！培养一种嗜好。让真正的热忱袭卷你。把今天活出趣味来！",
+"对别人的意见要表示尊重。千万别说：“你错了。",
+"要使别人喜欢你，首先你得改变对人的态度，把精神放得轻松一点，表情自然，笑容可掬，这样别人就会对你产生喜爱的感觉了。",
+"你可能明白了人类处世的天性——做错事的人只会责备别人，绝不责备自己。",
+"成功人际交往的第一个秘诀是：请对方帮一个忙；第二个秘诀：真诚赞美他人；第三个秘诀：尽量满足他人的需要。",
+"凡是你想控制的，其实都控制了你，当你什么都不要的时候，天地都是你的。",
+"遇见是因为，有债要还了，离开是因为还清了，前世不欠，今生不见，今生相见定有亏欠。",
+"缘起，我在人群中看见你，缘散，我看见你在人群中，如若流年有爱，就心随花开，如若人走情凉，就守心自暖。",
+"不要害怕失去，你所失去的，本来就不属于你，也不要害怕伤害，能伤害你的，都是你的劫数，繁华三千，看淡即是浮云，烦恼无数，想开就是晴天。",
+"你以为错过了是遗憾，其实可能是躲过一劫，别贪心，你不可能什么都拥有，也别灰心，你不可能什么都没有，所愿所不愿，不如心甘情愿，所愿所不愿，不如心安理得。",
+"你信不信有些事上天让你做不成，那是在保护你，别抱怨别生气，世间万物都是有定数的，得到未必是福，失去未必是祸，人生各有渡口，各有各舟，有缘躲不开，无缘碰不到，缘起则聚，缘尽则散。",
+"謙退是保身第一法，安詳是處世第一法；涵容是待人第一法，恬淡是養心第一法。",
+"輕當矯之以重，浮當矯之以實，褊當矯之以寬，躁急當矯之以和緩，剛暴當矯之以溫柔，淺露當矯之以沉潛。",
+"逆境順境看襟度，臨喜臨怒看涵養。",
+"學一分退讓，討一分便宜；增一分享用，減一分福澤。",
+"處難處之事愈宜寬，處難處之人愈宜厚，處至急之事愈宜緩。",
+"人好剛，我以柔勝之；人用術，我以誠感之。",
+"忍與讓，足以消無窮之災悔；古人有言:終身讓路,不失尺寸。",
+"恩怕先益後損，威怕先鬆後緊。先益後損，則恩反為仇，前功盡棄；先鬆後緊，則管束不下，反招怨怒。善用威者不輕怒，善用恩者不妄施。",
+"處事須留餘地，責善切戒盡言。",
+"持身不可太皎潔，一切侮辱垢穢要茹納得，處世不可太分明,一切賢愚好醜要包容得。",
+"靜座常思己過，閑談莫論人非。",
+"臨事須替別人想，論人先將自己想。",
+"欲論人者先自論，欲知人者先自知。",
+"倘名關未破，利鎖未開，藉言弘法利生，止是眼前活計。一點偷心，萬劫纏繞。……不與菩提大心相應，雲代佛揚化，吾不信也。不與為生死心相應，雲大菩提心，尤不信也。勝負情見不忘，僅成阿修羅法界；名利眷屬意念不忘，僅成三途魔羅種子。……利關不破，得失驚之；名關不破，毀譽動之。既為得失、毀譽所轉，猶以禪道佛法？嗚呼！",
+];
+
+const INTERVAL = 86400000;
+
+function dispalyQuote(){
+
+    document.getElementById('widget').innerHTML =quotes[0];
+    quotes.forEach((quote, i) => {
+        setTimeout(() => {
+            document.getElementById('widget').innerHTML =quote;
+        }, i * INTERVAL);  
+    });
+    }
+
+    function dispalyWidget() {
+        dispalyQuote();
+        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    }
+    dispalyWidget()
+
+</script>
+
+</body>
+</html>
